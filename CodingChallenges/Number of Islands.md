@@ -102,13 +102,7 @@ class Solution {
         return count;
     }
 
-    public void dfs(char[][] grid, int r, int c){
-        Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[]{r,c});  
-
-        while(!queue.isEmpty()){
-            int[] curr = queue.poll();
-
+    public void dfs(char[][] grid, int r, int c){  
             for(int[] dir: dirs){
                 int nr = curr[0] + dir[0];
                 int nc = curr[1] + dir[1];
@@ -123,8 +117,6 @@ class Solution {
 
 
         } 
-
-    }
 
 }
 ```
