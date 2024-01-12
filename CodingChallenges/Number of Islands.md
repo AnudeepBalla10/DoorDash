@@ -28,7 +28,7 @@ Input: grid = [
 ```
 Output: 3
 
-##BFS Approach: 
+## BFS Approach: 
 
 ```java
 class Solution {
@@ -79,7 +79,7 @@ class Solution {
 ```
 
 
-##DFS Approach: 
+## DFS Approach: 
 ```java
 
 class Solution {
