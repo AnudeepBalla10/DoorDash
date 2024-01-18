@@ -67,15 +67,17 @@ public class TimeIntervalGenerator {
     public static List<String> generateTimeInterval(String startTime, String endTime, int intervalMinutes) {
         List<String> result = new ArrayList<>();
 
-        // Parse start time
-        int startDay = getDayOfWeek(startTime.substring(0, 3));
-        int startHour = Integer.parseInt(startTime.substring(4, 6));
-        int startMinute = Integer.parseInt(startTime.substring(7, 9));
+        // Split start time
+        String[] startTokens = startTime.split(" ");
+        int startDay = getDayOfWeek(startTokens[0]);
+        int startHour = Integer.parseInt(startTokens[1].split(":")[0]);
+        int startMinute = Integer.parseInt(startTokens[1].split(":")[1]);
 
-        // Parse end time
-        int endDay = getDayOfWeek(endTime.substring(0, 3));
-        int endHour = Integer.parseInt(endTime.substring(4, 6));
-        int endMinute = Integer.parseInt(endTime.substring(7, 9));
+        // Split end time
+        String[] endTokens = endTime.split(" ");
+        int endDay = getDayOfWeek(endTokens[0]);
+        int endHour = Integer.parseInt(endTokens[1].split(":")[0]);
+        int endMinute = Integer.parseInt(endTokens[1].split(":")[1]);
 
         // Generate time intervals
         while (startDay < endDay || (startDay == endDay && (startHour < endHour || (startHour == endHour && startMinute <= endMinute)))) {
@@ -123,4 +125,3 @@ public class TimeIntervalGenerator {
         System.out.println(output);
     }
 }
-
