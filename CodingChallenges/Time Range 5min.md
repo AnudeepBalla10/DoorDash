@@ -53,3 +53,74 @@ public class TimeIntervalGenerator {
         System.out.println(output);
     }
 }
+
+```
+
+
+# Without Lib
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TimeIntervalGenerator {
+
+    public static List<String> generateTimeInterval(String startTime, String endTime, int intervalMinutes) {
+        List<String> result = new ArrayList<>();
+
+        // Parse start time
+        int startDay = getDayOfWeek(startTime.substring(0, 3));
+        int startHour = Integer.parseInt(startTime.substring(4, 6));
+        int startMinute = Integer.parseInt(startTime.substring(7, 9));
+
+        // Parse end time
+        int endDay = getDayOfWeek(endTime.substring(0, 3));
+        int endHour = Integer.parseInt(endTime.substring(4, 6));
+        int endMinute = Integer.parseInt(endTime.substring(7, 9));
+
+        // Generate time intervals
+        while (startDay < endDay || (startDay == endDay && (startHour < endHour || (startHour == endHour && startMinute <= endMinute)))) {
+            result.add(formatTime(startDay, startHour, startMinute));
+            startMinute += intervalMinutes;
+            if (startMinute >= 60) {
+                startHour++;
+                startMinute %= 60;
+            }
+            if (startHour >= 24) {
+                startDay++;
+                startHour %= 24;
+            }
+        }
+
+        return result;
+    }
+
+    private static int getDayOfWeek(String day) {
+        // Map day abbreviation to numeric value (e.g., Mon -> 1, Tue -> 2, ...)
+        switch (day) {
+            case "Mon": return 1;
+            case "Tue": return 2;
+            case "Wed": return 3;
+            case "Thu": return 4;
+            case "Fri": return 5;
+            case "Sat": return 6;
+            case "Sun": return 7;
+            default: return -1; // Invalid day
+        }
+    }
+
+    private static String formatTime(int day, int hour, int minute) {
+        // Format time as "uHHmm"
+        return String.format("%d%02d%02d", day, hour, minute);
+    }
+
+    public static void main(String[] args) {
+        String startTime = "Mon 10:45 AM";
+        String endTime = "Mon 11:00 AM";
+        int intervalMinutes = 5;
+
+        List<String> output = generateTimeInterval(startTime, endTime, intervalMinutes);
+
+        System.out.println(output);
+    }
+}
+
