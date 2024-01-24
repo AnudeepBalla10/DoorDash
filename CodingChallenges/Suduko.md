@@ -53,7 +53,7 @@ class Solution {
         int nrow = 0, ncol = 0;
         // checking if its the last col, if not move to next col else go to new row with
         // col=0;
-        if (col != board.length - 1) {
+        if (col != board.length) {
             nrow = row;
             ncol = col + 1;
         } else {
