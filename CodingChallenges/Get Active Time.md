@@ -22,6 +22,9 @@ Timestamp(12h) | Action
 * idle time = 10:20am-9:10am = 70 mins;
 * active time = total time-idle time = 355-70 = 285 mins;
 
+## Approach: PutTimes horizontally and calculate the interval diff;
+-> [8:30,9:10][10:20,12:45][12:15,2:25] now find the gaps in intervals;
+
 ```java
 
 import java.util.ArrayList;
