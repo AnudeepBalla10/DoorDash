@@ -14,4 +14,6 @@
   
 - Time increament 5 mins [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Time%20Range%205min.md)
 
-- 
+- Menu Updates[Changes] Tree Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/menus%20Updated%20Tree.md)
+
+- Menu Path Trei Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Doordash%20Restaurant%20Menus.md)
