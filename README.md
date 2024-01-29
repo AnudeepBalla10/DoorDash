@@ -17,3 +17,5 @@
 - Menu Updates[Changes] Tree Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/menus%20Updated%20Tree.md)
 
 - Menu Path Trei Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Doordash%20Restaurant%20Menus.md)
+
+- Reward High Tiered Dasher schedule view [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/deliveries%20Dasher%20scheduled.md)
