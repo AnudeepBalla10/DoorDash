@@ -23,10 +23,10 @@ Expected output: 6
 ```java
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.ArrayList;
 
 public class DasherSchedule {
 
-    // A class to represent a delivery with start time, end time, and pay.
     static class Delivery {
         int start, end, pay;
         
@@ -42,30 +42,34 @@ public class DasherSchedule {
         int end_time = 10;
         int[] d_starts = {2, 3, 5, 7};
         int[] d_ends = {6, 5, 10, 11};
-        int[] d_pays = {5, 2, 4, 1};
+        int[] d_pays = {5, 2, 4, 100};
 
-        // Print the maximum earnings possible
         System.out.println(maximumEarnings(start_time, end_time, d_starts, d_ends, d_pays));
     }
 
     private static int maximumEarnings(int start_time, int end_time, int[] d_starts, int[] d_ends, int[] d_pays) {
-        int n = d_starts.length;
-        Delivery[] deliveries = new Delivery[n];
+        ArrayList<Delivery> deliveriesList = new ArrayList<>();
 
-        // Populate the deliveries array
-        for (int i = 0; i < n; i++) {
-            deliveries[i] = new Delivery(d_starts[i], d_ends[i], d_pays[i]);
+        // Filter deliveries that fit within the start_time and end_time
+        for (int i = 0; i < d_starts.length; i++) {
+            if (d_starts[i] >= start_time && d_ends[i] <= end_time) {
+                deliveriesList.add(new Delivery(d_starts[i], d_ends[i], d_pays[i]));
+            }
         }
+
+        // Convert the list to an array for easier processing
+        Delivery[] deliveries = new Delivery[deliveriesList.size()];
+        deliveries = deliveriesList.toArray(deliveries);
 
         // Sort the deliveries based on their end times
         Arrays.sort(deliveries, Comparator.comparingInt(d -> d.end));
 
         // dp[i] will store the maximum earnings till the ith delivery
-        int[] dp = new int[n];
+        int[] dp = new int[deliveries.length];
         dp[0] = deliveries[0].pay; // Base case for the first delivery
 
         // Iterate over each delivery
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < deliveries.length; i++) {
             int pay = deliveries[i].pay;
 
             // Find the last non-conflicting delivery
@@ -79,25 +83,22 @@ public class DasherSchedule {
         }
 
         // The last element of dp will have the maximum earnings
-        return dp[n - 1];
+        return deliveries.length > 0 ? dp[deliveries.length - 1] : 0;
     }
 
-    // A binary search to find the last non-conflicting delivery
     private static int binarySearch(Delivery[] deliveries, int index) {
         int lo = 0, hi = index - 1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             if (deliveries[mid].end <= deliveries[index].start) {
-                if (deliveries[mid + 1].end <= deliveries[index].start) {
-                    lo = mid + 1;
-                } else {
+                if (mid == index - 1 || deliveries[mid + 1].end > deliveries[index].start) {
                     return mid;
                 }
+                lo = mid + 1;
             } else {
-                hi = mid - 1;    
+                hi = mid - 1;
             }
         }
         return -1; // No non-conflicting delivery found
     }
 }
-```
