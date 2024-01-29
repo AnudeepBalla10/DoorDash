@@ -19,3 +19,5 @@
 - Menu Path Trei Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Doordash%20Restaurant%20Menus.md)
 
 - Reward High Tiered Dasher schedule view [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/deliveries%20Dasher%20scheduled.md)
+
+- Nearest Dashmart [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/ADashMart.md)
