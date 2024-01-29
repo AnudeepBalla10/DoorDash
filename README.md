@@ -26,3 +26,4 @@
 
 - Road Part of the shortest path [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/shortest%20path%20Nodes.md)
 
+- Dasher max profit [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Dasher%20max%20profit.md)
