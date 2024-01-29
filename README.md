@@ -12,7 +12,7 @@
 
 - Stream last x max[Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Stream%20last%20x%20max.md)
   
-- Time increament 5 mins [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Time%20Range%205min.md)
+- Time increment 5 mins [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Time%20Range%205min.md)
 
 - Menu Updates[Changes] Tree Node [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/menus%20Updated%20Tree.md)
 
@@ -21,3 +21,8 @@
 - Reward High Tiered Dasher schedule view [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/deliveries%20Dasher%20scheduled.md)
 
 - Nearest Dashmart [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/ADashMart.md)
+
+- Dice Permutations [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/DicePermutations.md)
+
+- Road Part of the shortest path [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/shortest%20path%20Nodes.md)
+
