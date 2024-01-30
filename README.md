@@ -28,6 +28,6 @@
 
 - Dasher max profit [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Dasher%20max%20profit.md)
 
-- Employee free time [Code](https://leetcode.com/problems/employee-free-time/)
+- Employee free time [Code](https://leetcode.com/problems/employee-free-time/) or [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/FreeTimeFinder.md)
 
 - Dasher Clusters Covered [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Clusters%20Covered.md)
