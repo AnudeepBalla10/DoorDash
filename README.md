@@ -31,3 +31,5 @@
 - Employee free time [Code](https://leetcode.com/problems/employee-free-time/) or [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/FreeTimeFinder.md)
 
 - Dasher Clusters Covered [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Clusters%20Covered.md)
+
+- Max Island Area [Code](https://leetcode.com/problems/max-area-of-island/)
