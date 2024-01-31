@@ -33,3 +33,5 @@
 - Dasher Clusters Covered [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Clusters%20Covered.md)
 
 - Max Island Area [Code](https://leetcode.com/problems/max-area-of-island/)
+
+- Number of Islands [Code](https://leetcode.com/problems/number-of-islands/)
