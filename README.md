@@ -24,7 +24,7 @@
 
 - Dice Permutations [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/DicePermutations.md)
 
-- Road Part of the shortest path [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/shortest%20path%20Nodes.md)
+- Dasher travel b/w cities with weight nodes [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/shortest%20path%20Nodes.md)
 
 - Dasher max profit [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Dasher%20max%20profit.md)
 
@@ -42,4 +42,4 @@
 
 - N*N grid Dasher least time [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/NxNDasherGrid.md)
 
-- 
+- Complete Orders in give time [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/CompleteOrderInTime.md)
