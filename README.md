@@ -44,4 +44,4 @@
 
 - Complete Orders in give time [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/CompleteOrderInTime.md)
 
-- Binary Tree Maximum Path Sum [Code] (https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Binary%20Tree%20Maximum%20Path%20Sum.md)
+- Binary Tree Maximum Path Sum [Code](https://github.com/AnudeepBalla10/DoorDash/blob/main/CodingChallenges/Binary%20Tree%20Maximum%20Path%20Sum.md)
