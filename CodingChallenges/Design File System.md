@@ -26,41 +26,83 @@ split the given string by "/" and check the subString before the last "/" for pa
 
 class FileSystem {
 
-    HashMap<String, Integer> paths;
+    // The TrieNode data structure.
+    class TrieNode {
+        
+        String name;
+        int val = -1;
+        Map<String, TrieNode> map = new HashMap<>();
+        
+        TrieNode (String name) {
+            this.name = name;
+        }
+    }
     
+    TrieNode root;
+    
+    // Root node contains the empty string.
     public FileSystem() {
-        this.paths = new HashMap<String, Integer>();
+        this.root = new TrieNode("");
     }
     
     public boolean createPath(String path, int value) {
-        S
-        // Step-1: basic path validations
-        if (path.isEmpty() || (path.length() == 1 && path.equals("/")) || this.paths.containsKey(path)) {
+        
+        // Obtain all the components
+        String[] components = path.split("/");
+        
+        // Start "curr" from the root node.
+        TrieNode cur = root;
+        
+        // Iterate over all the components.
+        for (int i = 1; i < components.length; i++) {
+            
+            String currentComponent = components[i];
+            
+            // For each component, we check if it exists in the current node's dictionary.
+            if (cur.map.containsKey(currentComponent) == false) {
+                
+                // If it doesn't and it is the last node, add it to the Trie.
+                if (i == components.length - 1) {
+                    cur.map.put(currentComponent, new TrieNode(currentComponent));
+                } else {
+                    return false;
+                }    
+            }
+            
+            cur = cur.map.get(currentComponent);
+        }
+        
+        // Value not equal to -1 means the path already exists in the trie. 
+        if (cur.val != -1) {
             return false;
         }
         
-        int delimIndex = path.lastIndexOf("/");
-        String parent = path.substring(0, delimIndex);
-        
-        // Step-2: if the parent doesn't exist. Note that "/" is a valid parent.
-        if (parent.length() > 1 && !this.paths.containsKey(parent)) {
-            return false;
-        }
-        
-        // Step-3: add this new path and return true.
-        this.paths.put(path, value);
+        cur.val = value;
         return true;
     }
     
     public int get(String path) {
-        return this.paths.getOrDefault(path, -1);
+        
+        // Obtain all the components
+        String[] components = path.split("/");
+        
+        // Start "curr" from the root node.
+        TrieNode cur = root;
+        
+        // Iterate over all the components.
+        for (int i = 1; i < components.length; i++) {
+            
+            String currentComponent = components[i];
+            
+            // For each component, we check if it exists in the current node's dictionary.
+            if (cur.map.containsKey(currentComponent) == false) {
+                return -1;   
+            }
+            
+            cur = cur.map.get(currentComponent);
+        }
+        
+        return cur.val;
     }
 }
-
-/**
- * Your FileSystem object will be instantiated and called as such:
- * FileSystem obj = new FileSystem();
- * boolean param_1 = obj.createPath(path,value);
- * int param_2 = obj.get(path);
- */
 ```
