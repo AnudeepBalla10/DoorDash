@@ -88,6 +88,14 @@ class DoorDashScheduler {
         }
     }
 }
+```
 
+## follow Up
+
+```java
+ boolean isPreferredDasher = storePreferences.stream()
+                    .anyMatch(preference -> preference.storeId.equals(delivery.storeId) && preference.dasherId.equals(dasher.id));
+            if (isPreferredDasher && currentTime.getHour() >= 17) {
+                return true;  // Preferred dashers can see next day deliveries at 17:00 or later
 
 ```
